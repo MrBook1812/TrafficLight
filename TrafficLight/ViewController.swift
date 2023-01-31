@@ -29,8 +29,20 @@ class ViewController: UIViewController {
     }
 
     @IBAction func startButtonTap(_ sender: UIButton) {
-        redLight.alpha = 1
         startButton.setTitle("Next", for: .normal)
+        
+        if redLight.alpha == 0.3 {
+            redLight.alpha = 1
+        } else if redLight.alpha == 1 {
+            redLight.alpha = 0.3
+            yellowLight.alpha = 1
+        } else if yellowLight.alpha == 1 {
+            yellowLight.alpha = 0.3
+            greenLight.alpha = 1
+        } else {
+            greenLight.alpha = 0.3
+            redLight.alpha = 1
+        }
     }
     
 }
