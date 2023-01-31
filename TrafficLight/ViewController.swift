@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         redLight.layer.cornerRadius = 50
         yellowLight.layer.cornerRadius = 50
         greenLight.layer.cornerRadius = 50
@@ -23,12 +24,13 @@ class ViewController: UIViewController {
         redLight.alpha = 0.3
         yellowLight.alpha = 0.3
         greenLight.alpha = 0.3
+        
         startButton.layer.cornerRadius = 15
     }
 
     @IBAction func startButtonTap(_ sender: UIButton) {
         redLight.alpha = 1
-        
+        startButton.setTitle("Next", for: .normal)
     }
     
 }
